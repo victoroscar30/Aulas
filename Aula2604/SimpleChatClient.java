@@ -55,7 +55,7 @@ public class SimpleChatClient {
     private void setUpNetworking()
     {
         try{
-            sock = new Socket("localhost",5000);
+            Socket sock = new Socket("localhost",5000);
             InputStreamReader StreamReader = InputStreamReader(sock.getInputStream());
             Reader streamReader = null;
             reader = new BufferedReader(streamReader);
@@ -91,10 +91,8 @@ public class SimpleChatClient {
                     incoming.append(message + "/n");
                 }
             }catch(Exception ex){
-
+                ex.printStackTrace();
             }
         }
-        
-        
     }
 }
