@@ -18,6 +18,7 @@ public class SimpleChatClient {
     public static void main(String[] args) {
         SimpleChatClient client = new SimpleChatClient();
         client.go();
+        System.out.println("teste");
     }
 
     public void go(){
